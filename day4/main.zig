@@ -3,13 +3,13 @@ const Allocator = std.mem.Allocator;
 
 const offsets: [8]struct { isize, isize } = .{
     .{ -1, -1 },
-    .{  0, -1 },
-    .{  1, -1 },
-    .{ -1,  0 },
-    .{  1,  0 },
-    .{ -1,  1 },
-    .{  0,  1 },
-    .{  1,  1 },
+    .{ 0, -1 },
+    .{ 1, -1 },
+    .{ -1, 0 },
+    .{ 1, 0 },
+    .{ -1, 1 },
+    .{ 0, 1 },
+    .{ 1, 1 },
 };
 
 fn accessiblesAssumeCapacity(chars: *const [][]u8, output_buf: ?*std.ArrayList(struct { usize, usize })) error{BufTooSmall}!usize {

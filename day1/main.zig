@@ -80,7 +80,6 @@ test "example" {
         var buf: [4096]u8 = undefined;
         var reader = file.reader(&buf);
         const amount = try amountRolledOnZero(&reader.interface);
-        std.debug.print("amount rolled = {d}\n", .{amount});
         try std.testing.expect(amount == 6);
     }
 }
@@ -100,7 +99,6 @@ test "final" {
         var buf: [4096]u8 = undefined;
         var reader = file.reader(&buf);
         const amount = try amountRolledOnZero(&reader.interface);
-        std.debug.print("amount rolled = {d}\n", .{amount});
         try std.testing.expect(amount == 6122);
     }
 }
