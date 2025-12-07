@@ -4,8 +4,8 @@ const Allocator = std.mem.Allocator;
 fn isInvalid(id: []const u8) bool {
     if (id.len % 2 != 0) return false;
 
-    const fst = id[0..id.len / 2];
-    const snd = id[id.len / 2..];
+    const fst = id[0 .. id.len / 2];
+    const snd = id[id.len / 2 ..];
     return std.mem.eql(u8, fst, snd);
 }
 

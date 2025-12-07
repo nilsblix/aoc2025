@@ -15,7 +15,7 @@ fn totalJoltage(reader: *std.Io.Reader) !usize {
         var fst = Battery{ .idx = 0, .value = 0 };
 
         for (0..bank.len - 1) |idx| {
-            const value = try std.fmt.parseInt(usize, bank[idx..idx + 1], 10);
+            const value = try std.fmt.parseInt(usize, bank[idx .. idx + 1], 10);
             if (value > fst.value) {
                 fst.value = value;
                 fst.idx = idx;
@@ -24,7 +24,7 @@ fn totalJoltage(reader: *std.Io.Reader) !usize {
 
         var snd = Battery{ .idx = fst.idx + 1, .value = 0 };
         for (fst.idx + 1..bank.len) |idx| {
-            const value = try std.fmt.parseInt(usize, bank[idx..idx + 1], 10);
+            const value = try std.fmt.parseInt(usize, bank[idx .. idx + 1], 10);
             if (value > snd.value) {
                 snd.value = value;
                 snd.idx = idx;
@@ -68,7 +68,7 @@ fn overrideJoltage(reader: *std.Io.Reader, comptime n: usize) !usize {
             const last_idx = bank.len - n + i + 1;
 
             for (start_idx..last_idx) |j| {
-                const value = try std.fmt.parseInt(usize, bank[j..j + 1], 10);
+                const value = try std.fmt.parseInt(usize, bank[j .. j + 1], 10);
                 if (value > b.value) {
                     b.value = value;
                     b.idx = j;

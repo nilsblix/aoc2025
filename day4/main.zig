@@ -1,7 +1,7 @@
 const std = @import("std");
 const Allocator = std.mem.Allocator;
 
-const offsets: [8]struct{ isize, isize } = .{
+const offsets: [8]struct { isize, isize } = .{
     .{ -1, -1 },
     .{  0, -1 },
     .{  1, -1 },
