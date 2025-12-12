@@ -11,3 +11,4 @@ zig test day5/main.zig
 zig test day6/main.zig
 zig test day7/main.zig
 zig test day8/main.zig
+zig test day9/main.zig
