@@ -38,7 +38,7 @@ const Button = struct {
 };
 
 const JoltageState = struct {
-    items: [16]u16 = .{ 0 } ** 16,
+    items: [16]u16 = .{0} ** 16,
 };
 
 fn parseDesiredState(reader: *std.Io.Reader) !LedState {
@@ -338,5 +338,5 @@ pub fn main() !void {
         _ = desired_jolts;
     }
 
-    std.debug.print("steps to led: {d}, steps to joltages: {d}\n", .{sum_leds, sum_jolts});
+    std.debug.print("steps to led: {d}, steps to joltages: {d}\n", .{ sum_leds, sum_jolts });
 }

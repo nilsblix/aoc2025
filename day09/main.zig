@@ -314,7 +314,7 @@ fn maxRedAndGreen(alloc: Allocator, reader: *std.fs.File.Reader) !usize {
 }
 
 test "example part 1" {
-    var f = try std.fs.cwd().openFile("day9/input-test.txt", .{});
+    var f = try std.fs.cwd().openFile("day09/input-test.txt", .{});
     defer f.close();
 
     var reader_buf: [4096]u8 = undefined;
@@ -325,7 +325,7 @@ test "example part 1" {
 }
 
 test "final part 1" {
-    var f = try std.fs.cwd().openFile("day9/input.txt", .{});
+    var f = try std.fs.cwd().openFile("day09/input.txt", .{});
     defer f.close();
 
     var reader_buf: [4096]u8 = undefined;
@@ -340,7 +340,7 @@ test "example part 2" {
     defer _ = gpa.deinit();
     const alloc = gpa.allocator();
 
-    var f = try std.fs.cwd().openFile("day9/input-test.txt", .{});
+    var f = try std.fs.cwd().openFile("day09/input-test.txt", .{});
     defer f.close();
 
     var reader_buf: [4096]u8 = undefined;
@@ -355,7 +355,7 @@ test "final part 2" {
     defer _ = gpa.deinit();
     const alloc = gpa.allocator();
 
-    var f = try std.fs.cwd().openFile("day9/input.txt", .{});
+    var f = try std.fs.cwd().openFile("day09/input.txt", .{});
     defer f.close();
 
     var reader_buf: [4096]u8 = undefined;
@@ -425,7 +425,7 @@ pub fn main() !void {
     }
     const alloc = gpa.allocator();
 
-    var f = try std.fs.cwd().openFile("day9/input.txt", .{});
+    var f = try std.fs.cwd().openFile("day09/input.txt", .{});
     defer f.close();
 
     var reader_buf: [4096]u8 = undefined;

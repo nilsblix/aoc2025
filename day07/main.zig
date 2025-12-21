@@ -90,7 +90,7 @@ pub fn timelines(reader: *std.fs.File.Reader) !usize {
 }
 
 test "example part 1" {
-    var f = try std.fs.cwd().openFile("day7/input-test.txt", .{});
+    var f = try std.fs.cwd().openFile("day07/input-test.txt", .{});
     defer f.close();
 
     var reader_buf: [4096]u8 = undefined;
@@ -101,7 +101,7 @@ test "example part 1" {
 }
 
 test "final part 1" {
-    var f = try std.fs.cwd().openFile("day7/input.txt", .{});
+    var f = try std.fs.cwd().openFile("day07/input.txt", .{});
     defer f.close();
 
     var reader_buf: [4096]u8 = undefined;
@@ -112,7 +112,7 @@ test "final part 1" {
 }
 
 test "example part 2" {
-    var f = try std.fs.cwd().openFile("day7/input-test.txt", .{});
+    var f = try std.fs.cwd().openFile("day07/input-test.txt", .{});
     defer f.close();
 
     var reader_buf: [4096]u8 = undefined;
@@ -123,7 +123,7 @@ test "example part 2" {
 }
 
 test "final part 2" {
-    var f = try std.fs.cwd().openFile("day7/input.txt", .{});
+    var f = try std.fs.cwd().openFile("day07/input.txt", .{});
     defer f.close();
 
     var reader_buf: [4096]u8 = undefined;
@@ -134,7 +134,7 @@ test "final part 2" {
 }
 
 pub fn main() !void {
-    var f = try std.fs.cwd().openFile("day7/input.txt", .{});
+    var f = try std.fs.cwd().openFile("day07/input.txt", .{});
     defer f.close();
 
     var reader_buf: [4096]u8 = undefined;

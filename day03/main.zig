@@ -89,7 +89,7 @@ fn overrideJoltage(reader: *std.Io.Reader, comptime n: usize) !usize {
 }
 
 test "example part 1" {
-    var file = try std.fs.cwd().openFile("day3/input-test.txt", .{});
+    var file = try std.fs.cwd().openFile("day03/input-test.txt", .{});
     defer file.close();
     var buf: [4096]u8 = undefined;
     var reader = file.reader(&buf);
@@ -99,7 +99,7 @@ test "example part 1" {
 }
 
 test "final part 1" {
-    var file = try std.fs.cwd().openFile("day3/input.txt", .{});
+    var file = try std.fs.cwd().openFile("day03/input.txt", .{});
     defer file.close();
     var buf: [4096]u8 = undefined;
     var reader = file.reader(&buf);
@@ -109,7 +109,7 @@ test "final part 1" {
 }
 
 test "example part 2" {
-    var file = try std.fs.cwd().openFile("day3/input-test.txt", .{});
+    var file = try std.fs.cwd().openFile("day03/input-test.txt", .{});
     defer file.close();
     var buf: [4096]u8 = undefined;
     var reader = file.reader(&buf);
@@ -119,7 +119,7 @@ test "example part 2" {
 }
 
 test "final part 2" {
-    var file = try std.fs.cwd().openFile("day3/input.txt", .{});
+    var file = try std.fs.cwd().openFile("day03/input.txt", .{});
     defer file.close();
     var buf: [4096]u8 = undefined;
     var reader = file.reader(&buf);
@@ -129,7 +129,7 @@ test "final part 2" {
 }
 
 pub fn main() !void {
-    var file = try std.fs.cwd().openFile("day3/input.txt", .{});
+    var file = try std.fs.cwd().openFile("day03/input.txt", .{});
     defer file.close();
 
     var buf: [4096]u8 = undefined;

@@ -67,7 +67,7 @@ fn sumInvalids(alloc: Allocator, reader: *std.Io.Reader, comptime part2: bool) !
 }
 
 test "example part1" {
-    var file = try std.fs.cwd().openFile("day2/input-test.txt", .{});
+    var file = try std.fs.cwd().openFile("day02/input-test.txt", .{});
     defer file.close();
 
     var buf: [4096]u8 = undefined;
@@ -77,7 +77,7 @@ test "example part1" {
 }
 
 test "final part1" {
-    var file = try std.fs.cwd().openFile("day2/input.txt", .{});
+    var file = try std.fs.cwd().openFile("day02/input.txt", .{});
     defer file.close();
 
     var buf: [4096]u8 = undefined;
@@ -87,7 +87,7 @@ test "final part1" {
 }
 
 test "example part2" {
-    var file = try std.fs.cwd().openFile("day2/input-test.txt", .{});
+    var file = try std.fs.cwd().openFile("day02/input-test.txt", .{});
     defer file.close();
 
     var buf: [4096]u8 = undefined;
@@ -97,7 +97,7 @@ test "example part2" {
 }
 
 test "final part2" {
-    var file = try std.fs.cwd().openFile("day2/input.txt", .{});
+    var file = try std.fs.cwd().openFile("day02/input.txt", .{});
     defer file.close();
 
     var buf: [4096]u8 = undefined;
@@ -117,7 +117,7 @@ pub fn main() !void {
     // const alloc = gpa.allocator();
     const alloc = std.heap.page_allocator;
 
-    var file = try std.fs.cwd().openFile("day2/input.txt", .{});
+    var file = try std.fs.cwd().openFile("day02/input.txt", .{});
     defer file.close();
 
     var buf: [4096]u8 = undefined;

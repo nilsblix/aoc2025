@@ -66,7 +66,7 @@ fn amountRolledOnZero(reader: *std.Io.Reader) !usize {
 }
 
 test "example" {
-    var file = try std.fs.cwd().openFile("day1/input-test.txt", .{});
+    var file = try std.fs.cwd().openFile("day01/input-test.txt", .{});
     defer file.close();
 
     {
@@ -85,7 +85,7 @@ test "example" {
 }
 
 test "final" {
-    var file = try std.fs.cwd().openFile("day1/input.txt", .{});
+    var file = try std.fs.cwd().openFile("day01/input.txt", .{});
     defer file.close();
 
     {
@@ -104,7 +104,7 @@ test "final" {
 }
 
 pub fn main() !void {
-    var file = try std.fs.cwd().openFile("day1/input.txt", .{});
+    var file = try std.fs.cwd().openFile("day01/input.txt", .{});
     defer file.close();
 
     var buf: [4096]u8 = undefined;

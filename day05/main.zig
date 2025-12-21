@@ -134,7 +134,7 @@ fn freshIngredients(alloc: Allocator, reader: *std.Io.Reader, total: bool) !usiz
 }
 
 test "example part 1" {
-    var file = try std.fs.cwd().openFile("day5/input-test.txt", .{});
+    var file = try std.fs.cwd().openFile("day05/input-test.txt", .{});
     defer file.close();
 
     var buf: [4096]u8 = undefined;
@@ -145,7 +145,7 @@ test "example part 1" {
 }
 
 test "final part 1" {
-    var file = try std.fs.cwd().openFile("day5/input.txt", .{});
+    var file = try std.fs.cwd().openFile("day05/input.txt", .{});
     defer file.close();
 
     var buf: [4096]u8 = undefined;
@@ -156,7 +156,7 @@ test "final part 1" {
 }
 
 test "example part 2" {
-    var file = try std.fs.cwd().openFile("day5/input-test.txt", .{});
+    var file = try std.fs.cwd().openFile("day05/input-test.txt", .{});
     defer file.close();
 
     var buf: [4096]u8 = undefined;
@@ -167,7 +167,7 @@ test "example part 2" {
 }
 
 test "final part 2" {
-    var file = try std.fs.cwd().openFile("day5/input.txt", .{});
+    var file = try std.fs.cwd().openFile("day05/input.txt", .{});
     defer file.close();
 
     var buf: [4096]u8 = undefined;
@@ -187,7 +187,7 @@ pub fn main() !void {
     }
     const alloc = gpa.allocator();
 
-    var file = try std.fs.cwd().openFile("day5/input.txt", .{});
+    var file = try std.fs.cwd().openFile("day05/input.txt", .{});
     defer file.close();
 
     var buf: [4096]u8 = undefined;

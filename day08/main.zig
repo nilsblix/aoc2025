@@ -186,27 +186,27 @@ pub fn lastConnectionXProduct(path: []const u8) !i64 {
 }
 
 test "example part 1" {
-    const n = try circuitProduct("day8/input-test.txt", 10);
+    const n = try circuitProduct("day08/input-test.txt", 10);
     try std.testing.expect(n == 40);
 }
 
 test "example part 2" {
-    const n = try lastConnectionXProduct("day8/input-test.txt");
+    const n = try lastConnectionXProduct("day08/input-test.txt");
     try std.testing.expect(n == 25272);
 }
 
 test "final part 1" {
-    const n = try circuitProduct("day8/input.txt", 1000);
+    const n = try circuitProduct("day08/input.txt", 1000);
     try std.testing.expect(n == 123234);
 }
 
 test "final part 2" {
-    const n = try lastConnectionXProduct("day8/input.txt");
+    const n = try lastConnectionXProduct("day08/input.txt");
     try std.testing.expect(n == 9259958565);
 }
 
 pub fn main() !void {
-    const part1 = try circuitProduct("day8/input.txt", 1000);
-    const part2 = try lastConnectionXProduct("day8/input.txt");
+    const part1 = try circuitProduct("day08/input.txt", 1000);
+    const part2 = try lastConnectionXProduct("day08/input.txt");
     std.debug.print("part1: {d}\npart2: {d}\n", .{ part1, part2 });
 }
